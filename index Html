@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hairstyle Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Hairstyle Shop</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+      <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Find Your Perfect Hairstyle</h1>
+    <p>Browse, select, and order your favorite styles</p>
+  </section>
+
+  <section id="shop">
+    <h2>Shop Hairstyles</h2>
+    <div class="filters">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('Braids')">Braids</button>
+      <button onclick="filterProducts('Curls')">Curls</button>
+      <button onclick="filterProducts('Bob')">Bob</button>
+    </div>
+    <div class="products" id="products"></div>
+  </section>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <span id="close-cart">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total">Total: $0</p>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hairstyle Shop</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
